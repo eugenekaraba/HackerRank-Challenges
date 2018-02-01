@@ -1,0 +1,23 @@
+students=[]
+scores=[]
+second_students=[]
+for _ in range(int(raw_input())):
+    name = raw_input()
+    score = float(raw_input())
+    scores.append(score)
+    students.append([name,score])
+
+min_score = min(scores)
+scores2 = [x for x in scores if x != min_score]
+students = [i for i in students if i[1]!=min_score]
+#for i in students:
+#    if i[1]==min_score:
+#        students.remove(i)
+
+second_score =  min(scores2)       
+second_students = [i for i in students if i[1]==second_score]
+
+second_students.sort()
+
+for i in second_students:
+    print i[0]
