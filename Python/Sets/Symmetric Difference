@@ -1,0 +1,24 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(raw_input())
+nset = raw_input()
+nset = nset.split()
+for i in range(n):
+    nset[i] = int(nset[i])
+
+m = int(raw_input())
+mset = raw_input()
+mset = mset.split()
+for i in range(m):
+    mset[i] = int(mset[i])
+
+mset = set(mset)
+nset = set(nset)
+dif = nset.difference(mset)
+dif1 = mset.difference(nset)
+dif = list(dif)
+dif1 = list(dif1)
+dif.extend(dif1)
+dif.sort()
+
+for i in dif:
+    print i
