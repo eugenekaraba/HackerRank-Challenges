@@ -1,0 +1,6 @@
+if __name__ == '__main__':
+    record = {}
+a = [raw_input().split(' ') for i in xrange(int(raw_input()))]
+for i in a:
+   record[i[0]]=(float(i[1])+float(i[2])+float(i[3]))/3
+print("%.2f" % record[raw_input()])
