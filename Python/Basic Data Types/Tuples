@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(raw_input())
+k = raw_input()
+k = k.split()
+for i in range(n):
+    k[i] = int(k[i])
+
+k = tuple(k)
+print hash(k)
