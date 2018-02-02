@@ -1,0 +1,15 @@
+from collections import OrderedDict
+
+number = int(raw_input())
+shoplist = OrderedDict()
+for i in range(0,number):
+    entry = raw_input().split()
+    item_name = " ".join(entry[:-1])
+    item_price = int(entry[-1])
+    if item_name in shoplist:
+        shoplist[item_name] = shoplist[item_name] + item_price
+    else:
+        shoplist[item_name] = item_price
+
+for i in shoplist:
+    print i, shoplist[i]
