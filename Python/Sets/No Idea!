@@ -1,0 +1,13 @@
+[n, m] = raw_input().split(" ")
+[n,m] = map(int, [n,m])
+lst = map(int,raw_input().split(" "))
+like = set(map(int,raw_input().split(" ")))
+dislike = set(map(int,raw_input().split(" ")))
+hapiness = 0
+for i in lst:
+    if i in like:
+        hapiness = hapiness + 1
+    if i in dislike:
+        hapiness = hapiness - 1
+
+print hapiness 
