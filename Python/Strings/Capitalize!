@@ -1,0 +1,9 @@
+import re
+def capitalize(string):
+    text = re.split(r'(\s+)', string)
+    for index, item in enumerate(text):
+        if item[0].islower():
+            new_i = item.replace(item[0],item[0].upper(),1)
+            text[index] = new_i
+
+    return ''.join(text)
