@@ -1,0 +1,16 @@
+def merge_the_tools(string, k):
+    n = len(string)
+#k = int(raw_input())
+    subs = []
+    subs_new = []
+    for i in range(0, len(string), k):
+        subs.append(string[i:i+k])
+        
+    for sub in subs:
+        sub_new = []
+        for char in sub:
+            if char not in sub_new:
+                sub_new.append(char)
+        subs_new.append(''.join(sub_new))
+    
+    print '\n'.join(subs_new)
