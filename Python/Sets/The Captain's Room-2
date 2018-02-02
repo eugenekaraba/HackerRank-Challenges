@@ -1,0 +1,3 @@
+k = int(raw_input())
+rooms = map(int, raw_input().split())
+print (sum(i*k for i in set(rooms)) - sum(rooms))/(k-1)
