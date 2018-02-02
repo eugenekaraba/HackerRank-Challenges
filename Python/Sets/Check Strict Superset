@@ -1,0 +1,14 @@
+def is_superset(setA, setB):
+    if (setA.intersection(setB)==setB) and setA.difference(setB)!=0:
+        return True
+    else:
+        return False
+
+setA = set(map(int, raw_input().split()))
+n = raw_input()
+count = True
+for i in range(int(n)):
+    if is_superset(setA, set(map(int, raw_input().split()))) == False:
+        count = False
+
+print count
