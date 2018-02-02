@@ -1,0 +1,26 @@
+#!/bin/bash                                                                     
+                                                                                
+# Given three integers (X, Y and Z) representing the three sides of a triangle, identify whether the triangle is Scalene, Isosceles, or Equilateral.
+                                                                                
+read X                                                                          
+read Y                                                                          
+read Z                                                                          
+                                                                                
+if [ $X -lt 1 ] || [ $X -gt 1000 ] || [ $Y -lt 1 ] || [ $Y -gt 1000 ] ||  [ $X -lt 1 ] || [ $X -gt 1000 ]
+then                                                                            
+    exit 1                                                                      
+fi                                                                              
+if [ $((X+Y)) -le $Z ] || [ $((X+Z)) -le $Y ] || [ $((Y+Z)) -le $X ]            
+then                                                                            
+    exit 1                                                                      
+fi                                                                              
+                                                                                
+if [ $X -eq $Y ] && [ $X -eq $Z ]                                               
+then                                                                            
+    echo "EQUILATERAL"                                                          
+elif [ $X -eq $Y ] || [ $X -eq $Z ] || [ $Y -eq $Z ]                            
+then                                                                            
+    echo "ISOSCELES"                                                            
+else                                                                            
+    echo "SCALENE"                                                              
+fi
