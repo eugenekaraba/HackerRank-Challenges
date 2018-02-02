@@ -1,0 +1,10 @@
+#!/bin/bash 
+# your task is to use for loops to display only odd natural numbers from 1 to 9
+two=2                                                                          
+for i in {1..100}                                                              
+do                                                                             
+    if [ `echo $((i%two)) | bc` == 1 ]                                         
+    then                                                                       
+        echo $i                                                                 
+    fi                                                                         
+done 
