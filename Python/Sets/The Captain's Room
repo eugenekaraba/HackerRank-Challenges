@@ -1,0 +1,7 @@
+k = int(raw_input())
+rooms = map(int, raw_input().split())
+#real_sum = sum(rooms)
+#expected_sum = sum(i*k for i in set(rooms))
+#print real_sum, expected_sum
+print (sum(i*k for i in set(rooms)) - sum(rooms))/(k-1)
+#print captain_room
