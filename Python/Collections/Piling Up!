@@ -1,0 +1,36 @@
+from collections import deque
+
+def single_case():
+    numbers = int(raw_input())
+    numbs = map(int, raw_input().split())
+    numbs_dict = deque()
+    numbs_dict.extend(numbs)
+    stackable = True
+    if numbs_dict[0] >= numbs_dict[-1]:
+        cur_max = numbs_dict[0]
+    else:
+        cur_max = numbs_dict[-1]
+    while len(numbs_dict):
+        if numbs_dict[0] >= numbs_dict[-1]:
+            cand_cur_max = numbs_dict.popleft()
+            #print "1a", cand_cur_max
+        else:
+            cand_cur_max = numbs_dict.pop()
+            #print "1b",cand_cur_max
+        if cand_cur_max > cur_max:
+            #print "2a",cand_cur_max, cur_max
+            stackable = False
+            break
+        else:
+            #print "2b",cand_cur_max, cur_max
+            cur_max = cand_cur_max
+    if stackable:
+        print "Yes"
+    else:
+        print "No"
+
+
+
+cases_number = int(raw_input())
+for i in range(cases_number):
+    single_case()
