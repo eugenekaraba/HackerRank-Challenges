@@ -1,0 +1,9 @@
+from __future__ import division
+from itertools import *
+
+N = int(raw_input())
+chars = raw_input().split()
+K = int(raw_input())
+combosTotal  = list(combinations(chars, K))
+combosAlpha = [i for i in combosTotal if ('a' in i) == True]
+print("%.4f" % (len(combosAlpha)/len(combosTotal)))
