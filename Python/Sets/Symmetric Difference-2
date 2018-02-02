@@ -1,0 +1,9 @@
+from __future__ import print_function
+setM = set()
+setN = set()
+M = int(raw_input())
+setM.update(map(int, raw_input().split(' ')))
+N = int(raw_input())
+setN.update(map(int, raw_input().split(' ')))
+
+print (*sorted((list((setM.difference(setN)).union(setN.difference(setM))))), sep='\n')
