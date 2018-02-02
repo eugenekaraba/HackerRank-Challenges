@@ -1,0 +1,13 @@
+n = input()
+s = set(map(int, raw_input().split()))
+c = int(raw_input())
+
+for i in range(c):
+    comm = raw_input().split()
+    if comm[0]=='pop':
+        command = 's.' + comm[0] + '()'
+    else:
+        command = 's.' + comm[0] + '(' + comm[1] + ')'
+    eval(command)
+
+print sum(s)
