@@ -1,0 +1,5 @@
+string = raw_input()
+index, character = raw_input().split()
+lst = list(string)
+lst[int(index)]=character
+print ''.join(lst)
