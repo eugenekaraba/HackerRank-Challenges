@@ -1,0 +1,15 @@
+#!/bin/bash                                                                     
+                                                                                   
+# Given two integers, X and Y, find their sum, difference, product, and quotient.
+                                                                                
+read X                                                                             
+read Y                                                                             
+if [ $X -ge 101 ] || [ $X -le -101 ] || [ $Y -gt 101 ] || [ $Y -le -101 ] || [ $Y -eq 0 ]
+then                                                                            
+    exit 1                                                                         
+fi                                                                                 
+                                                                                   
+echo $((X+Y))                                                                      
+echo $((X-Y))                                                                      
+echo $((X*Y))                                                                      
+echo $((X/Y))
