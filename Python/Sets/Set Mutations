@@ -1,0 +1,8 @@
+input()
+set_A = set(map(int,raw_input().split()))
+for _ in range(int(raw_input())):
+    command, len_B = raw_input().split()
+    set_B = set(map(int, raw_input().split()))
+    eval('set_A.' + command + '(set_B)')
+
+print sum(set_A)
