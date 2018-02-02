@@ -1,0 +1,10 @@
+import collections
+
+word = raw_input()
+occurences = dict()
+while len(word):
+    occurences[word[0]] = word.count(word[0])
+    word = word.replace(word[0],'')
+od = collections.OrderedDict(sorted(occurences.items(), key=lambda t: (-t[1],t[0])))
+for i in range(0,3):
+    print od.items()[i][0], od.items()[i][1]
