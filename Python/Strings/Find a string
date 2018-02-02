@@ -1,0 +1,6 @@
+count = 0
+[string, sub] = [raw_input(), raw_input()]
+for i in range((len(string)-len(sub)+1)):
+    if str(string[int(i):(int(i)+len(sub))]) == str(sub):
+        count=count+1
+print count
