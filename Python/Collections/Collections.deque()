@@ -1,0 +1,13 @@
+from collections import deque
+
+d = deque()
+commands = int(raw_input())
+for i in range(commands):
+    command = raw_input().split()
+    if (len(command) == 2):
+        eval("d."+command[0]+"("+command[1]+")")
+    else:
+        eval("d." + command[0] + "()")
+
+for i in d:
+    print i,
