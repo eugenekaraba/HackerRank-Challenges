@@ -1,0 +1,18 @@
+s = raw_input()
+alnnum = False
+alpha = False
+digit = False
+lower = False
+upper = False
+if any(i.isalnum() for i in s):
+    alnnum = True
+if any(i.isalpha() for i in s):
+    alpha = True
+if any(i.isdigit() for i in s):
+    digit = True
+if any(i.islower() for i in s):
+    lower = True
+if any(i.isupper() for i in s):
+    upper = True
+
+print alnnum, "\n", alpha, "\n", digit, "\n", lower, "\n", upper
