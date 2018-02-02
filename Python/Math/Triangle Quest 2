@@ -1,0 +1,2 @@
+for j in range(1,int(raw_input())+1): #More than 2 lines will result in 0 score. Do not leave a blank line also
+    print sum(map(lambda(i,el): pow(10,len(range(1,j+1,1)+range(j-1,0,-1))-i-1)*el ,enumerate(range(1,j+1,1)+range(j-1,0,-1))))
