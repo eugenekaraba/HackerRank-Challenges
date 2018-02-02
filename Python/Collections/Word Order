@@ -1,0 +1,14 @@
+from collections import OrderedDict
+
+number = int(raw_input())
+wordlist = OrderedDict()
+for i in range(0,number):
+    word = raw_input()
+    if word in wordlist:
+        wordlist[word] = wordlist[word] + 1
+    else:
+        wordlist[word] = 1
+
+print len(wordlist)
+for i in wordlist:
+    print wordlist[i],
