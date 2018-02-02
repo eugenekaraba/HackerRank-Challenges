@@ -1,0 +1,5 @@
+eng = input()
+eng_set  = set(raw_input().split())
+fr = input()
+fr_set = set(raw_input().split())
+print len(eng_set.intersection(fr_set))
