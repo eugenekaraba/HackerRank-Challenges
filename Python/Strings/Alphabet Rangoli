@@ -1,0 +1,23 @@
+import string
+al = string.ascii_lowercase
+al_lst = list(al)
+# print list(alphabet)
+# print '-'.join(al)
+
+n = int(raw_input())
+let = al_lst[0:n]
+# print let
+
+for i in reversed(range(n)):
+    center = let[i]
+    side_r = let[(i+1):]
+    side_l = side_r[::-1]
+    string = ''.join(side_l)+str(center)+''.join(side_r)
+    print '-'.join(string).center(((n-1)*4+1),"-")
+
+for i in range(1,n):
+    center = let[i]
+    side_r = let[(i + 1):]
+    side_l = side_r[::-1]
+    string = ''.join(side_l) + str(center) + ''.join(side_r)
+    print '-'.join(string).center(((n-1)*4+1),"-")
