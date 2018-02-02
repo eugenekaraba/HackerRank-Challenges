@@ -1,0 +1,12 @@
+from __future__ import division
+from collections import namedtuple
+number = int(raw_input())
+attributes = raw_input().split()
+Student = namedtuple('Student',attributes)
+sum = 0
+for i in range(0,number):
+    CurrentStudentAttributes = raw_input().split()
+    CurrentStudent = Student(CurrentStudentAttributes[0],CurrentStudentAttributes[1],CurrentStudentAttributes[2],CurrentStudentAttributes[3])
+    sum = sum + int(CurrentStudent.MARKS)
+
+print("%.2f" % float(sum/number))
