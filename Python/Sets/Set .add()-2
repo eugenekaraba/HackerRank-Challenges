@@ -1,0 +1,9 @@
+stamps = set()
+n = int(raw_input())
+for _ in range(n):
+    curr = raw_input()
+    if curr not in stamps:
+        stamps.add(curr)
+print len(stamps)
+
+#print(len(set([str(input()) for x in range(int(input()))])))
