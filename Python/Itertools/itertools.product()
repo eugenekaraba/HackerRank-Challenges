@@ -1,0 +1,7 @@
+from itertools import product
+A = map(int,raw_input().split())
+B = map(int,raw_input().split())
+C = ''
+for i in sorted(list(product(A,B))):
+    C = C+str(i)+' '
+print C
