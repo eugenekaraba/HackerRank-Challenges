@@ -1,0 +1,22 @@
+from itertools import groupby
+
+string = raw_input()
+tuples = []
+final = ''
+for index in range(len(string)-1):
+    if string[index] == string[index+1]:
+        tuples.append((1,string[index]))
+    else:
+        tuples.append((0, string[index]))
+tuples.append((0, string[len(string)-1]))
+#print tuples
+
+for key, group in groupby(tuples, lambda tuple: tuple[1]):
+    #print key, group
+    count = 1
+    for item in group:
+        count = count + item[0]
+
+    final = final + '(' + str(count) + ', ' + key + ') '
+
+print final
