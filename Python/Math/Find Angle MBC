@@ -1,0 +1,7 @@
+from math import *
+degree_sign= u'\N{DEGREE SIGN}'
+AB = float(raw_input())
+BC = float(raw_input())
+AC = hypot(AB, BC)
+MBC = degrees(asin(AB/AC))
+print str(int(round(MBC)))+degree_sign
