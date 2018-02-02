@@ -1,0 +1,4 @@
+from cmath import *
+num = complex(raw_input())
+print polar(num)[0]
+print polar(num)[1]
