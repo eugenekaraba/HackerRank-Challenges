@@ -1,0 +1,16 @@
+n, m = map(int,raw_input().split())
+indexList = list()
+keysList = list()
+for i in range(0,n):
+    indexList.append(raw_input())
+for i in range(0,m):
+    keysList.append(raw_input())
+
+for key in keysList:
+    for index, element in enumerate(indexList):
+        if key not in indexList:
+            print '-1',
+            break
+        elif key == element:
+            print index+1,
+    print '\n',
