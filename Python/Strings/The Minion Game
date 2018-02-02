@@ -1,0 +1,19 @@
+word = raw_input()
+
+vowels = 'AEIOU'
+
+kevinscore = 0
+stuartscore = 0
+
+for i in range(len(word)):
+    if word[i] in vowels:
+        kevinscore += (len(word) - i)
+    else:
+        stuartscore += (len(word) - i)
+
+if kevinscore > stuartscore:
+    print "Kevin", kevinscore
+elif kevinscore < stuartscore:
+    print "Stuart", stuartscore
+else:
+    print "Draw"
